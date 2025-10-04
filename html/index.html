@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="tr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="MUSAAAAAAAAA" content="MUSA İFŞA">
+            <title>İBOMEN</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            body {
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                line-height: 1.6;
+                color: #333;
+            }
+
+            /* Header & Navigation */
+            header {
+                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                color: white;
+                padding: 1rem 0;
+                position: fixed;
+                width: 100%;
+                top: 0;
+                z-index: 1000;
+                box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            }
+
+            nav {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 0 2rem;
+            }
+
+            .logo {
+                font-size: 1.5rem;
+                font-weight: bold;
+            }
+
+            nav ul {
+                display: flex;
+                list-style: none;
+                gap: 2rem;
+            }
+
+            nav a {
+                color: white;
+                text-decoration: none;
+                transition: opacity 0.3s;
+            }
+
+            nav a:hover {
+                opacity: 0.8;
+            }
+
+            /* Hero Section */
+            .hero {
+                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                color: white;
+                text-align: center;
+                padding: 150px 2rem 100px;
+                margin-top: 60px;
+            }
+
+            .hero h1 {
+                font-size: 3rem;
+                margin-bottom: 1rem;
+            }
+
+            .hero p {
+                font-size: 1.3rem;
+                margin-bottom: 2rem;
+            }
+
+            .btn {
+                display: inline-block;
+                padding: 12px 30px;
+                background: white;
+                color: #667eea;
+                text-decoration: none;
+                border-radius: 5px;
+                font-weight: bold;
+                transition: transform 0.3s;
+            }
+
+            .btn:hover {
+                transform: translateY(-3px);
+            }
+
+            /* Sections */
+            section {
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 80px 2rem;
+            }
+
+            h2 {
+                text-align: center;
+                font-size: 2.5rem;
+                margin-bottom: 3rem;
+                color: #667eea;
+            }
+
+            /* Hakkımda */
+            .about-content {
+                display: flex;
+                gap: 3rem;
+                align-items: center;
+            }
+
+            .about-image {
+                width: 300px;
+                height: 300px;
+                border-radius: 50%;
+                background: #667eea;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 4rem;
+                color: white;
+            }
+
+            .about-text {
+                flex: 1;
+            }
+
+            /* Yetenekler */
+            .skills-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 2rem;
+            }
+
+            .skill-card {
+                background: #f4f4f4;
+                padding: 2rem;
+                border-radius: 10px;
+                text-align: center;
+                transition: transform 0.3s;
+            }
+
+            .skill-card:hover {
+                transform: translateY(-10px);
+                box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            }
+
+            .skill-card h3 {
+                color: #667eea;
+                margin-bottom: 1rem;
+            }
+
+            /* Projeler */
+            .projects-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                gap: 2rem;
+            }
+
+            .project-card {
+                background: white;
+                border-radius: 10px;
+                overflow: hidden;
+                box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+                transition: transform 0.3s;
+            }
+
+            .project-card:hover {
+                transform: translateY(-5px);
+            }
+
+            .project-image {
+                width: 100%;
+                height: 200px;
+                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: white;
+                font-size: 3rem;
+            }
+
+            .project-content {
+                padding: 1.5rem;
+            }
+
+            .project-content h3 {
+                color: #667eea;
+                margin-bottom: 0.5rem;
+            }
+
+            /* İletişim Formu */
+            form {
+                max-width: 600px;
+                margin: 0 auto;
+            }
+
+            .form-group {
+                margin-bottom: 1.5rem;
+            }
+
+            label {
+                display: block;
+                margin-bottom: 0.5rem;
+                font-weight: bold;
+                color: #667eea;
+            }
+
+            input, textarea {
+                width: 100%;
+                padding: 12px;
+                border: 2px solid #e0e0e0;
+                border-radius: 5px;
+                font-size: 1rem;
+                font-family: inherit;
+            }
+
+            input:focus, textarea:focus {
+                outline: none;
+                border-color: #667eea;
+            }
+
+            textarea {
+                resize: vertical;
+                min-height: 150px;
+            }
+
+            .btn-submit {
+                background: #667eea;
+                color: white;
+                border: none;
+                cursor: pointer;
+                width: 100%;
+            }
+
+            .btn-submit:hover {
+                background: #764ba2;
+            }
+
+            /* Footer */
+            footer {
+                background: #333;
+                color: white;
+                text-align: center;
+                padding: 2rem;
+            }
+
+            .social-links {
+                margin-top: 1rem;
+            }
+
+            .social-links a {
+                color: white;
+                margin: 0 1rem;
+                text-decoration: none;
+                font-size: 1.2rem;
+            }
+
+            /* Responsive */
+            @media (max-width: 768px) {
+                .hero h1 {
+                    font-size: 2rem;
+                }
+
+                .about-content {
+                    flex-direction: column;
+                    text-align: center;
+                }
+
+                nav ul {
+                    gap: 1rem;
+                }
+
+                h2 {
+                    font-size: 2rem;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Header & Navigation -->
+        <header>
+            <nav>
+                <div class="logo">👨‍💻 MyPortfolio</div>
+                <ul>
+                    <li>
+                        <a 
+                        href="musa.html" target="_blank"> 
+                            <button
+                                    
+                                style="background-color: 
+                                rgba(0, 0, 0, 0); color: 
+                                rgb(255, 255, 255); 
+                                padding: 2px 1px; 
+                                border-radius: 40px; 
+                                border: none;">
+                                musa ifşa
+                            </button>
+                        </a>
+                    </li>
+<!--------------------------------------------------------------------->
+                    <li>
+                        <a href="#hakkimda">bilgiler işte
+
+
+                        </a>
+                    </li>
+<!--------------------------------------------------------------------->                    
+                    <li>
+                        <a href="#yetenekler">reklam😝
+
+
+                        </a>
+                    </li>
+<!--------------------------------------------------------------------->
+                    <li>
+                        <a href="#projeler">boş öylesine
+
+
+                        </a>
+                    </li>
+<!--------------------------------------------------------------------->
+                    <li>
+                        <a href="#iletisim">ulaşım
+
+                            
+                        </a>
+                    </li>
+<!--------------------------------------------------------------------->
+                </ul>
+            </nav>
+        </header>
+
+
+
+        <!-- Hero Section -->
+        <section id="anasayfa" class="hero">
+            <h1>niye geldin siteme</h1>
+            <p>BENİM SİTEME NEDEN GELDİN AMK</p>
+            <a href="#iletisim" class="btn">ulaş bana</a>
+        </section>
+
+        <!-- Hakkımda -->
+        <section id="hakkimda">
+            <h2>bilgiler aw</h2>
+            <div class="about-content">
+            <div class="about-image">😝</div>
+            <div class="about-text">
+            <h3>musa</h3>
+            <p>enayi / gay </p>
+        </section>
+                    
+    </body>
+</html>
